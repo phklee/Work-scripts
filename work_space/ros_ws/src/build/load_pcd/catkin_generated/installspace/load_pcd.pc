@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: load_pcd
+Description: Description of load_pcd
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

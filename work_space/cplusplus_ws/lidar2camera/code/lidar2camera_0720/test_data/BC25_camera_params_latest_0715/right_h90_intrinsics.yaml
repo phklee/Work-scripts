@@ -1,0 +1,21 @@
+height: 720
+width: 1280
+K: [829.055501, 0, 640.559578, 0, 830.10365, 311.738894, 0, 0, 1]
+D: [-0.313078, 0.089909, -0.001145, -0.000436, 0]
+P: [832.981113, 0.0, 602.714929, 0.0, 0.0, 833.714357, 406.759573, 0.0, 0.0, 0.0, 1.0, 0.0]
+distortion_model: plumb_bob
+header:
+  stamp:
+    nsecs: 0
+    secs: 0
+  frame_id: short_camera
+  seq: 0
+binning_y: 0
+binning_x: 0
+R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+roi:
+  y_offset: 0
+  height: 0
+  x_offset: 0
+  do_rectify: False
+  width: 0

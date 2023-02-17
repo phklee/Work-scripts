@@ -1,0 +1,1703 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /sensor1
+        - /sensor1/lidar1
+        - /sensor1/lidar1/single1
+        - /sensor1/radar1
+        - /sensor1/radar1/front1
+        - /sensor1/radar1/rear1
+        - /perception1
+        - /perception1/visonperception1
+        - /perception1/dogmperception1
+        - /perception1/dogmperception1/1131
+        - /perception1/dogmperception1/1151
+        - /perception1/perception1
+        - /perception1/perception1/before_preprocess1
+        - /perception1/perception1/subfusion1
+        - /perception1/perception1/fusion1
+        - /perception1/perception1/fusion1/after_preprocess1
+        - /perception1/perception1/fusion1/mot_track_point1
+        - /perception1/perception1/radar2cam1/front1
+        - /perception1/perception1/radar2cam1/rear1
+        - /perception1/perception1/vision1/lidar2seg1
+        - /perception1/perception1/vision1/lidar2object1
+      Splitter Ratio: 0.5326633453369141
+    Tree Height: 671
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: fusion_semantic
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Axes
+      Enabled: false
+      Length: 5
+      Name: Axes
+      Radius: 0.20000000298023224
+      Reference Frame: <Fixed Frame>
+      Value: false
+    - Alpha: 0.5
+      Cell Size: 10
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 40
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 0; 255; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: base_map
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.25
+      Style: Flat Squares
+      Topic: /basemap_rgb
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Group
+              Displays:
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: top
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/center
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: left
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/left
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: right
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/right
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 10; 170; 255
+                  Min Color: 0; 0; 0
+                  Name: front
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/front
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 10; 170; 255
+                  Min Color: 0; 0; 0
+                  Name: rear
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/rear
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 10; 170; 255
+                  Min Color: 0; 0; 0
+                  Name: rear_right
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/rear_right
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 10; 170; 255
+                  Min Color: 0; 0; 0
+                  Name: rear_left
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05000000074505806
+                  Style: Points
+                  Topic: /driver/lidar/cloud/rear_left
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+              Enabled: false
+              Name: single
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: fusion
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 1
+              Size (m): 0.05000000074505806
+              Style: Points
+              Topic: /driver/lidar/cloud/fusion
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: blind
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 1
+              Size (m): 0.05000000074505806
+              Style: Points
+              Topic: /driver/lidar/cloud/blind
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+          Enabled: true
+          Name: lidar
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /miivii_gmsl_ros_node_A/camera
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: combined_image
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: raw
+              Unreliable: false
+              Value: false
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /miivii_gmsl_ros_node_A/camera2
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: gmsl_1_front_h60
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: compressed
+              Unreliable: false
+              Value: false
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /miivii_gmsl_ros_node_A/camera_seg
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: gmsl_3he1
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: compressed
+              Unreliable: false
+              Value: false
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /miivii_gmsl_ros_node_A/camera
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: image_raw
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: compressed
+              Unreliable: false
+              Value: false
+          Enabled: true
+          Name: vision
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar0_bbox
+                  Name: radar0_bbox
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar0_bbox_text
+                  Name: radar0_bbox_text
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar0_bbox_calibration
+                  Name: radar0_cal_bbox
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar0_bbox_calibration_text
+                  Name: radar0_cal_bbox_text
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+              Enabled: true
+              Name: front
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar1_bbox
+                  Name: radar1_bbox
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar1_bbox_text
+                  Name: radar1_bbox_text
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar1_bbox_calibration
+                  Name: radar1_cal_bbox
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radar1_bbox_calibration_text
+                  Name: radar1_cal_bbox_text
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+              Enabled: true
+              Name: rear
+          Enabled: true
+          Name: radar
+      Enabled: true
+      Name: sensor
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /debug/vision_segment_result
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: gmsl_3he1_seg
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: raw
+              Unreliable: false
+              Value: false
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /debug/vision_resa_result
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: lane_seg
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: raw
+              Unreliable: false
+              Value: false
+          Enabled: true
+          Name: visionsegperception
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /debug/trafficlight_results
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: trafficlight_detection
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: compressed
+              Unreliable: false
+              Value: false
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /debug/object_detect_result
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: object_detect
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: raw
+              Unreliable: false
+              Value: false
+          Enabled: true
+          Name: visonperception
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Group
+              Displays:
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: false
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: dogm_no_ground
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05999999865889549
+                  Style: Points
+                  Topic: /dogm/debug/no_ground_cloud
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /dogm_cluster/dogmdet
+                  Name: dogmdet
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: RGB8
+                  Decay Time: 0
+                  Enabled: false
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: dogm_clouds
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 3
+                  Size (m): 0.10000000149011612
+                  Style: Flat Squares
+                  Topic: /dogm_cluster/dogm_clouds
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: false
+              Enabled: true
+              Name: 113
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /dogm/detections_dogm
+                  Name: detections_dogm
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: -9999
+                    Min Value: 9999
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 0; 255; 0
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: false
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: detections_dogm_grids
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 5
+                  Size (m): 0.10000000149011612
+                  Style: Flat Squares
+                  Topic: /dogm/detections_dogm_grids
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: false
+              Enabled: true
+              Name: 115
+          Enabled: true
+          Name: dogmperception
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /lidar2object/detections_lidar
+                  Name: detections_lidar_all
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /dogm/detections_dogm
+                  Name: detections_dogm_all
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+              Enabled: true
+              Name: before_preprocess
+            - Class: rviz/Group
+              Displays:
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 0; 255; 0
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: blind_roi_cloud
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.009999999776482582
+                  Style: Points
+                  Topic: /blindlidar/debug/rect_roi_cloud
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Class: rviz/Image
+                  Enabled: true
+                  Image Topic: /blindlidar/debug/grid_img
+                  Max Value: 1
+                  Median window: 5
+                  Min Value: 0
+                  Name: blind_grid_img
+                  Normalize Range: true
+                  Queue Size: 2
+                  Transport Hint: raw
+                  Unreliable: false
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: blind_ground_cloud
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 2
+                  Size (m): 0.009999999776482582
+                  Style: Points
+                  Topic: /blindlidar/debug/ground_cloud
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 252; 233; 79
+                  Min Color: 0; 0; 0
+                  Name: blind_basemap_roi
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 2
+                  Size (m): 0.009999999776482582
+                  Style: Points
+                  Topic: /blindlidar/debug/basemap_roi_cloud
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 0; 0
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: blind_obs_cloud
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 3
+                  Size (m): 0.009999999776482582
+                  Style: Points
+                  Topic: /blindlidar/debug/obstacle_cloud
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+              Enabled: false
+              Name: blind_lidar
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /subfusion/detections_lidar
+                  Name: lidar2cam_result
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /subfusion/detections_radar
+                  Name: radar2cam_result
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /subfusion/detections_dogm
+                  Name: dogmcluster_result
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+              Enabled: true
+              Name: subfusion
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/Group
+                  Displays:
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /fusion/detections_lidar
+                      Name: fusion_detections_lidar
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /fusion/detections_radar
+                      Name: fusion_detections_radar
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /fusion/detections_dogm
+                      Name: fusion_detections_dogm
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: -9999
+                        Min Value: 9999
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 255; 255; 0
+                      Color Transformer: FlatColor
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: dogmDets_grids
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 5
+                      Size (m): 0.10000000149011612
+                      Style: Flat Squares
+                      Topic: /fusion/dogmDets_grids
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /fusion/matched_detections_lidar
+                      Name: matched_detections_lidar
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /fusion/matched_detections_radar
+                      Name: matched_detections_radar
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /fusion/matched_detections_dogm
+                      Name: matched_detections_dogm
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                  Enabled: true
+                  Name: after_preprocess
+                - Class: rviz/Group
+                  Displays:
+                    - Class: rviz/MarkerArray
+                      Enabled: true
+                      Marker Topic: /mot_manager/matched_detections_lidar
+                      Name: match_lidar_track_point
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: true
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: 0.8673844337463379
+                        Min Value: -2.0392582416534424
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 0; 255; 0
+                      Color Transformer: RGB8
+                      Decay Time: 0
+                      Enabled: true
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: matched_lidar_dogm_grids
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 5
+                      Size (m): 0.10000000149011612
+                      Style: Points
+                      Topic: /mot_manager/matched_lidar_dogm_grids
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: true
+                  Enabled: false
+                  Name: mot_track_point
+                - Class: rviz/Image
+                  Enabled: true
+                  Image Topic: /fusion/semantic_image
+                  Max Value: 1
+                  Median window: 5
+                  Min Value: 0
+                  Name: fusion_semantic
+                  Normalize Range: true
+                  Queue Size: 2
+                  Transport Hint: raw
+                  Unreliable: false
+                  Value: true
+                - Class: rviz/Image
+                  Enabled: false
+                  Image Topic: /fusion/lanedet_image
+                  Max Value: 1
+                  Median window: 5
+                  Min Value: 0
+                  Name: fusion_lanedet
+                  Normalize Range: true
+                  Queue Size: 2
+                  Transport Hint: raw
+                  Unreliable: false
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: true
+                  Marker Topic: /objectfusion_bbox
+                  Name: obj_fusion_bbox
+                  Namespaces:
+                    debug_perception: true
+                  Queue Size: 100
+                  Value: true
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /objectfusion_marker
+                  Name: obj_fusion_marker
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /objectfusion_marker_text
+                  Name: obj_fusion_text
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 0; 255; 0
+                  Color Transformer: RGB8
+                  Decay Time: 0
+                  Enabled: false
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: obj_cells
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 5
+                  Size (m): 0.30000001192092896
+                  Style: Points
+                  Topic: /perception_object_cells
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: false
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 0; 125
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: false
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: static_cells
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 3
+                  Size (m): 0.30000001192092896
+                  Style: Points
+                  Topic: /perception_static_cells
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: false
+              Enabled: true
+              Name: fusion
+            - Class: rviz/Group
+              Displays:
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 255; 255; 255
+                  Color Transformer: Intensity
+                  Decay Time: 0
+                  Enabled: true
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: non_ground_cloud
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 1
+                  Size (m): 0.05999999865889549
+                  Style: Points
+                  Topic: /lidar/debug/no_ground_cloud
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: true
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /lidar/debug/detection_bbox
+                  Name: detection_bbox
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /lidar/debug/detection_polygon
+                  Name: detection_polygon
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Alpha: 1
+                  Autocompute Intensity Bounds: true
+                  Autocompute Value Bounds:
+                    Max Value: 10
+                    Min Value: -10
+                    Value: true
+                  Axis: Z
+                  Channel Name: intensity
+                  Class: rviz/PointCloud2
+                  Color: 0; 255; 0
+                  Color Transformer: FlatColor
+                  Decay Time: 0
+                  Enabled: false
+                  Invert Rainbow: false
+                  Max Color: 255; 255; 255
+                  Min Color: 0; 0; 0
+                  Name: detection_points
+                  Position Transformer: XYZ
+                  Queue Size: 10
+                  Selectable: true
+                  Size (Pixels): 5
+                  Size (m): 0.009999999776482582
+                  Style: Points
+                  Topic: /lidar/debug/detection_points
+                  Unreliable: false
+                  Use Fixed Frame: true
+                  Use rainbow: true
+                  Value: false
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /lidar/debug/detection_cube
+                  Name: detection_cube
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+              Enabled: true
+              Name: lidar
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/Group
+                  Displays:
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/raw_object
+                      Name: radar_raw_obj
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/raw_object/text
+                      Name: radar_raw_obj_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/object
+                      Name: radar_obj
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/object/text
+                      Name: radar_obj_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/cluster
+                      Name: radar_cluster
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/cluster/text
+                      Name: radar_cluster_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/track
+                      Name: radar_trk
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/track/text
+                      Name: radar_trk_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radar2cam/front_radar_detections
+                      Name: detections_radar
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                  Enabled: true
+                  Name: front
+                - Class: rviz/Group
+                  Displays:
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_raw_object
+                      Name: radar_raw_obj
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_raw_object/text
+                      Name: radar_raw_obj_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_object
+                      Name: radar_obj
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_object/text
+                      Name: radar_obj_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_cluster
+                      Name: radar_cluster
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_cluster/text
+                      Name: radar_cluster_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_track
+                      Name: radar_trk
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /radarprocess/rear_track/text
+                      Name: radar_trk_text
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                  Enabled: true
+                  Name: rear
+                - Class: rviz/MarkerArray
+                  Enabled: false
+                  Marker Topic: /radarprocess/fusion
+                  Name: radar_fusion
+                  Namespaces:
+                    {}
+                  Queue Size: 100
+                  Value: false
+                - Class: rviz/Image
+                  Enabled: false
+                  Image Topic: /radar2cam/image
+                  Max Value: 1
+                  Median window: 5
+                  Min Value: 0
+                  Name: radar2img
+                  Normalize Range: true
+                  Queue Size: 2
+                  Transport Hint: raw
+                  Unreliable: false
+                  Value: false
+              Enabled: true
+              Name: radar2cam
+            - Class: rviz/Group
+              Displays:
+                - Class: rviz/Group
+                  Displays:
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: 10
+                        Min Value: -10
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 255; 255; 255
+                      Color Transformer: RGB8
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: fusion_obj_colored
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 3
+                      Size (m): 0.30000001192092896
+                      Style: Flat Squares
+                      Topic: /fusion/object_colored_clouds
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                  Enabled: true
+                  Name: lidar2seg
+                - Class: rviz/Group
+                  Displays:
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /lidar2object/cam_det
+                      Name: cam_det
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /lidar2object/cam_trk
+                      Name: cam_trk
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: 10
+                        Min Value: -10
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 0; 255; 0
+                      Color Transformer: FlatColor
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: cam_trk_cells
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 5
+                      Size (m): 0.30000001192092896
+                      Style: Points
+                      Topic: /lidar2object/cam_trk_cells
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /lidar2object/cam_trk_polygon
+                      Name: cam_trk_polygon
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: 10
+                        Min Value: -10
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 0; 255; 0
+                      Color Transformer: FlatColor
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: cam_trk_points
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 5
+                      Size (m): 0.30000001192092896
+                      Style: Points
+                      Topic: /lidar2object/cam_trk_points
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /lidar2object/cam_trk_detections
+                      Name: cam_trk_detections
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Class: rviz/MarkerArray
+                      Enabled: false
+                      Marker Topic: /lidar2object/detections_lidar
+                      Name: detections_lidar
+                      Namespaces:
+                        {}
+                      Queue Size: 100
+                      Value: false
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: -9999
+                        Min Value: 9999
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 0; 255; 0
+                      Color Transformer: FlatColor
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: detections_lidar_cells
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 5
+                      Size (m): 3
+                      Style: Points
+                      Topic: /lidar2object/detections_lidar_cells
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: -9999
+                        Min Value: 9999
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 0; 255; 0
+                      Color Transformer: FlatColor
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: detections_lidar_grids
+                      Position Transformer: XYZ
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 5
+                      Size (m): 0.10000000149011612
+                      Style: Flat Squares
+                      Topic: /lidar2object/detections_lidar_grids
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                    - Class: rviz/Image
+                      Enabled: false
+                      Image Topic: /lidar2object/cloudsImg
+                      Max Value: 1
+                      Median window: 5
+                      Min Value: 0
+                      Name: clouds2Img
+                      Normalize Range: true
+                      Queue Size: 2
+                      Transport Hint: raw
+                      Unreliable: false
+                      Value: false
+                    - Alpha: 1
+                      Autocompute Intensity Bounds: true
+                      Autocompute Value Bounds:
+                        Max Value: 10
+                        Min Value: -10
+                        Value: true
+                      Axis: Z
+                      Channel Name: intensity
+                      Class: rviz/PointCloud2
+                      Color: 255; 255; 255
+                      Color Transformer: ""
+                      Decay Time: 0
+                      Enabled: false
+                      Invert Rainbow: false
+                      Max Color: 255; 255; 255
+                      Min Color: 0; 0; 0
+                      Name: foreground_clouds
+                      Position Transformer: ""
+                      Queue Size: 10
+                      Selectable: true
+                      Size (Pixels): 3
+                      Size (m): 0.10000000149011612
+                      Style: Points
+                      Topic: /fusion/foreground_clouds
+                      Unreliable: false
+                      Use Fixed Frame: true
+                      Use rainbow: true
+                      Value: false
+                  Enabled: true
+                  Name: lidar2object
+              Enabled: true
+              Name: vision
+          Enabled: true
+          Name: perception
+      Enabled: true
+      Name: perception
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /car_layout
+      Name: car_model
+      Namespaces:
+        car_model: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /prediction_trajectories
+      Name: prediction_trajs
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: trajectory
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.4000000059604645
+      Style: Flat Squares
+      Topic: /trajectory_marker_line
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /vehicle_info_text
+      Name: vehicle_info
+      Namespaces:
+        debug_perception: true
+      Queue Size: 100
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: base_link
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Angle: 0.059999704360961914
+      Class: rviz/TopDownOrtho
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Scale: 14.128032684326172
+      Target Frame: <Fixed Frame>
+      Value: TopDownOrtho (rviz)
+      X: 34.3692741394043
+      Y: 2.6231987476348877
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1217
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000040000000000000257000002f9fc020000000cfb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc000001ab000002f9000000e60100001cfa000000000100000005fb000000100044006900730070006c0061007900730100000000ffffffff0000015600fffffffb0000000a005600690065007700730100000000ffffffff0000010000fffffffb0000001c0062006c0069006e0064005f0067007200690064005f0069006d00670100000000ffffffff0000009a00fffffffb000000140063006c006f00750064007300320049006d00670100000000ffffffff0000008300fffffffb0000001200530065006c0065006300740069006f006e0100000000ffffffff0000007400fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650100000270000000620000000000000000fb0000000a0049006d00610067006501000003070000009e0000000000000000fb0000000a0049006d00610067006500000002dd000000c80000000000000000fb0000000c00430061006d00650072006101000002f6000000af0000000000000000fb0000001c0066007500730069006f006e005f006c0061006e006500640065007400000003e3000000c10000001600ffffff000000010000010f000003fefc0200000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b20000000000000000000000020000073d00000168fc0100000002fc000000000000073d000000c700fffffffa00000007020000000ffb000000120069006d006100670065005f0072006100770100000000ffffffff0000001600fffffffb0000001c0063006f006d00620069006e00650064005f0069006d006100670065010000003d000001220000001600fffffffb000000200067006d0073006c005f0031005f00660072006f006e0074005f0068003600300100000000ffffffff0000001600fffffffb000000120067006d0073006c005f00330068006500310100000000ffffffff0000001600fffffffb0000001a0067006d0073006c005f0033006800650031005f0073006500670100000000ffffffff0000001600fffffffb00000010006c0061006e0065005f0073006500670100000000ffffffff0000001600fffffffb0000001a006f0062006a006500630074005f0064006500740065006300740100000000ffffffff0000001600fffffffb0000001e0066007500730069006f006e005f00730065006d0061006e0074006900630100000000ffffffff0000001600fffffffb0000002c0074007200610066006600690063006c0069006700680074005f0064006500740065006300740069006f006e0100000000ffffffff0000001600fffffffb0000001c006c0061006e0065005f0064006500740065006300740069006f006e0100000000ffffffff0000000000000000fb0000002c0074007200610066006600690063006c0069006700680074005f0064006500740065006300740069006f006e0100000000ffffffff0000000000000000fb000000120072006100640061007200320069006d00670100000000ffffffff0000001600fffffffb0000001e0066007500730069006f006e005f00730065006d0061006e0074006900630100000000ffffffff0000000000000000fb0000001c0066007500730069006f006e005f006c0061006e00650064006500740100000000ffffffff0000000000000000fb0000001200720061006400610072003200630061006d0000000000ffffffff0000000000000000fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073d00000039fc0100000002fc000000000000073d0000000000fffffffa000000000200000003fb0000000a0049006d0061006700650100000000ffffffff0000000000000000fb0000000a0049006d0061006700650100000000ffffffff0000000000000000fb0000000800540069006d0065000000026d000001770000003900fffffffb0000000800540069006d00650100000000000004500000000000000000000004e0000002f900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1853
+  X: 707
+  Y: 27
+  blind_grid_img:
+    collapsed: false
+  clouds2Img:
+    collapsed: false
+  combined_image:
+    collapsed: false
+  fusion_lanedet:
+    collapsed: false
+  fusion_semantic:
+    collapsed: false
+  gmsl_1_front_h60:
+    collapsed: false
+  gmsl_3he1:
+    collapsed: false
+  gmsl_3he1_seg:
+    collapsed: false
+  image_raw:
+    collapsed: false
+  lane_seg:
+    collapsed: false
+  object_detect:
+    collapsed: false
+  radar2img:
+    collapsed: false
+  trafficlight_detection:
+    collapsed: false

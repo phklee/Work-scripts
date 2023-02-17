@@ -1,0 +1,13 @@
+name: decode_rosbag
+
+dependencies:
+  - python==3.7.0
+  - pip
+  - matplotlib
+  - opencv
+  - pip:
+    - pyyaml==5.4.1
+    - pycryptodomex==3.15.0
+    - gnupg==2.3.1
+    - rospkg==1.4.0
+    - numpy==1.16.6

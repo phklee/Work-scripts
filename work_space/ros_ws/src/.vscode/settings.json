@@ -1,0 +1,103 @@
+{
+    // *** 配置新建文件注释和方法注释
+    "fileheader.configObj": {
+        "createFileTime": true, //设置为true则为文件新建时候作为date，否则注释生成时间为date
+        "autoAdd": false, // 默认开启自动添加头部注释，当文件没有设置头部注释时保存会自动添加
+        "autoAlready": false, // 默认开启
+        "prohibitAutoAdd": [
+            "json",
+            "md"
+        ], // 禁止.json .md文件，自动添加头部注释
+        "wideSame": false, // 设置为true开启
+        "wideNum": 15, // 字段长度 默认为13
+        "annotationStr": {
+            "head": "/**",
+            "middle": " * @",
+            "end": " */",
+            "use": true //设置自定义注释可用
+        },
+        "headInsertLine": {
+            "php": 2
+        }
+    },
+    // *** 文件头部注释  linux: ctrl+cmd+i; windows: ctrl+alt+i   Keyboard Shortcuts搜索: fileheader 
+    "fileheader.customMade": {
+        "Description": "",
+        "version": "",
+        "Author": "lisiqi",
+        "Date": "Do not edit",
+        "LastEditors": "",
+        "LastEditTime": "Do not Edit",
+    },
+    // *** 函数注释   linux: ctrl+cmd+t; windows: ctrl+alt+t   Keyboard Shortcuts搜索: cursorTip
+    "fileheader.cursorMode": {
+        "description": "",
+        "param": "",
+        "return": "",
+        "author": "lisiqi"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Monokai Pro",
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+    "remote.SSH.remotePlatform": {
+        "192.168.117.132(My_PC_Ubuntu)": "linux",
+        "192.168.117.143(HQ_AMR)": "linux"
+    },
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    // *** CMake settings
+    "cmake.configureOnOpen": true,
+    "cmake.cmakePath": "/usr/bin/cmake", //Linux
+    // "cmake.mingwSearchDirs": ["G:/MinGW"],           //Windows
+    // "cmake.cmakePath": "G:\\CMake\\bin\\cmake.exe",  //Windows
+    // "cmake.ctestPath": "",                           //Windows
+    // "cmake.generator": "MinGW Makefiles",            //Windows
+    // *** Terminal settings
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.inheritEnv": false,
+    "c-cpp-compile-run.run-in-external-terminal": true,
+    "code-runner.runInTerminal": true,
+    // "maven.terminal.useJavaHome": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    // *** JAVA settings
+    // "java.import.gradle.user.home": "/opt/gradle/gradle-6.8.1/bin/gradle",
+    // LeetCode settings
+    // "leetcode.endpoint": "leetcode-cn",
+    // "leetcode.workspaceFolder": "D:\\C++_Learning\\LeetCode" //Windows
+    // "leetcode.workspaceFolder": "/home/lsq/Work/workspace/cpp_ws/LeetCode",  //Linux
+    // "leetcode.hint.configWebviewMarkdown": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false,
+    "editor.formatOnType": false,
+    // "C_Cpp.formatting": "clangFormat",
+    // "C_Cpp.clang_format_path": "./.clang-format",   // 打开就无法直接使用根目录下的文件进行自动格式化,而是使用指定路径的.clang-format文件
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    // *** 不同步的一些选项
+    "settingsSync.ignoredSettings": [
+        "editor.formatOnType",
+        "editor.formatOnSave"
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.editorAssociations": {
+        "*.cpp": "default"
+    },
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": false,
+    "files.associations": {
+        "string": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

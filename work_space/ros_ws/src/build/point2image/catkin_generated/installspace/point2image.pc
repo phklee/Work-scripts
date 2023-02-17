@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: point2image
+Description: Description of point2image
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: rosconsole roscpp sensor_msgs geometry_msgs

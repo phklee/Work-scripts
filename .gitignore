@@ -1,0 +1,5 @@
+.idea/
+__pycache__/
+work_space/ros_ws/.vscode/
+work_space/ros_ws/build/
+work_space/ros_ws/devel/

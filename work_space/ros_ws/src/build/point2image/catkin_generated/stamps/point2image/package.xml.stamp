@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>point2image</name>
+  <version>0.0.1</version>
+  <description>The point2image package</description>
+  <maintainer email="lisiqi@user.com">lisiqi</maintainer>
+  <license>Apache 2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rosconsole</depend>
+  <depend>roscpp</depend>
+  <depend>hqauto_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+</package>

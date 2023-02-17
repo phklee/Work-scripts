@@ -1,0 +1,78 @@
+#!/bin/sh -e
+# 
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+nvpmodel -m 0
+modprobe can
+modprobe can-raw
+modprobe can-dev
+modprobe mttcan
+ip link set can0 up type can bitrate 500000
+export ROS_HOSTNAME=192.168.1.112
+export ROS_MASTER_URI=http://192.168.1.112:11311
+export ROS_IP=192.168.1.112
+sleep 2
+rm -rf /home/nvidia/.ros/*
+rm -rf /root/.ros/*
+
+bash /boot/ip_link_restart.sh &
+
+ifconfig eth1 192.168.3.1 
+sleep 3
+
+bash /boot/en_peripheral/en_peridevice.sh &
+bash /home/nvidia/en_gmsl.sh
+sleep 1
+#/home/nvidia/gpio_control/bin/gmsl_trigger &
+#sleep 5
+
+bash /boot/release-g1m-module_install.sh
+
+##en 4G module not fore boot
+echo 338 >/sys/class/gpio/export
+echo out >/sys/class/gpio/gpio338/direction
+echo 0 >/sys/class/gpio/gpio338/value
+
+#bash /boot/pppd_call_4g_new.sh &
+#sleep 25
+insmod /boot/xavier_pps_rising.ko
+
+bash /boot/mount_emmc.sh &
+/usr/bin/expect /boot/fdisk_emmc.sh &
+sleep 10
+
+
+/boot/gprm &
+bash /boot/test_time_check.sh &
+sleep 2
+bash /boot/start_camera_113.sh &
+
+chmod 777 /dev/ttyTHS*
+ln -s /dev/ttyTHS4 /dev/ttyUART_232_422_485_A
+
+startup_wizard_command fast_sync_server  &
+sleep 2
+startup_wizard_command slow_sync_server  &
+sleep 2
+startup_wizard_command os_monitor xavier  &
+sleep 2
+
+startup_wizard_command monitor_pool load_table /boot/avos_monitor.conf &
+#bash /boot/start_rosmaster.sh &
+#sleep 5
+bash /boot/start_avos.sh &
+sleep 5
+#bash /boot/start_cloudservice.sh &
+
+timedatectl set-ntp false
+
+exit 0
+

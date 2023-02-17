@@ -1,0 +1,37 @@
+---
+BasedOnStyle: Google
+---
+Language:                               Cpp
+Cpp11BracedListStyle:                   true
+Standard:                               Cpp11
+
+# 用于匹配注释信息的正则表达式，被匹配的行不会做任何修改
+CommentPragmas:                         '^ NOLINT:'
+
+ColumnLimit: 120
+
+# Mimic cpplint style
+IncludeCategories:
+  # Note that the "main" header is priority 0
+  # The priority is assigned to first match in the ordered list
+  # ROS and C standard libraries
+  - Regex:       '<(ros/|arpa/|netinet/|net/if|sys/)?[^\./]*\.h>'
+    Priority:    0
+  # C++ standard libraries
+  - Regex:       '<[^/\./]*>'
+    Priority:    0
+  # Miscelaneous system libraries
+  - Regex:       '<(immintrin.h|malloc.h|wait.h|x86intrin.h|cuda*)>'
+    Priority:    1   
+  # Experimental or other system libraries
+  - Regex:       '<'
+    Priority:    2
+  # Test libs
+  - Regex:       '"(gtest|gmock)/'
+    Priority:    3
+  # The rest
+  - Regex:       '.*'
+    Priority:    4    
+  # Protobuf Files
+  - Regex:       '\.pb\.h'
+    Priority:    5

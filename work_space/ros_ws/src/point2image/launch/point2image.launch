@@ -1,0 +1,98 @@
+<launch>
+  <arg name="usradar_serial_port"       value="/dev/usradar_serial000"/>
+  <!-- <arg name="usradar_serial_port"       value="/dev/ttyUSB0"/> -->
+  <arg name="usradar_baud_rate"         value="9600" />
+  <arg name="usradar_topic_name"        value="/detection/usradar/objects" />
+  <arg name="usradar_filter_method"     value="2" />              <!-- 使用的滤波算法，1:去极值取平均滤波，2:少数服从多数取平均滤波 -->
+  <arg name="usradar_filter_length"     value="8" />
+  <arg name="usradar_num"               value="4" />
+
+  <arg name="uwb_serial_port"           value="/dev/uwb_serial"/>
+  <!-- <arg name="uwb_serial_port"           value="/dev/ttyUSB2"/> -->
+  <arg name="uwb_baud_rate"             value="115200" />
+  <arg name="uwb_topic_name"            value="/detection/uwb_pdoa/objects/" />
+  <arg name="uwb_filter_method"         value="2" />              <!-- 使用的滤波算法，1:去极值取平均滤波，2:少数服从多数取平均滤波 -->
+  <arg name="uwb_filter_length"         value="8" />
+
+  <arg name="input_topic_odom"          value="/odom" />
+  <arg name="input_topic_imu"           value="imu_data" />
+  <arg name="output_topic_cmd"          value="raw_cmd_vel" />
+  <arg name="speed_lim_v"               value="1.0" />              <!-- 线速度限制值(最大)，默认：0.3，单位：m/s -->
+  <arg name="speed_lim_w"               value="0.262" />            <!-- 角速度限制值(最大)，默认：0.262≈15°；0.175≈10°；1.2≈310°，单位：rad/s-->
+  <arg name="accel_lim_v"               value="0.3" />              <!-- 线速度加速比，默认：0.3 -->
+  <arg name="accel_lim_w"               value="0.175" />            <!-- 角速度加速比，默认：0.175 -->
+  <arg name="frequency"                 value="20.0" />             <!-- 设置速度话题发布频率 -->
+  <arg name="decel_factor"              value="2.0" />              <!-- 减速比，默认：1.0 -->
+  <arg name="robot_feedback"            value="0" />                <!-- 0:不使用odom，1:使用odom，默认：0-->
+  <arg name="safe_distance_uwb"         value="1.5" />              <!-- uwb安全距离，x<1.5则急停，默认：1.5，单位：m -->
+  <arg name="follow_distance_uwb"       value="10.0" />             <!-- uwb跟随距离，x>10.0则默认直线行驶，默认：10.0，单位：m -->
+  <arg name="usradar0_distances_range"  value="[0, 0.7, 0.50]" />   <!-- 0<x<0.7为检测范围，0.5为usradar安全距离，x<0.5则急停 -->
+  <arg name="usradar1_distances_range"  value="[0, 0.5, 0.15]" />
+  <arg name="usradar2_distances_range"  value="[0, 0.3, 0.15]" />
+  <arg name="usradar3_distances_range"  value="[0, 0.5, 0.15]" />
+
+  <arg name="node_name"             value="velocity_smoother"/>
+  <arg name="nodelet_manager_name"  value="nodelet_manager"/>
+  <arg name="config_file"           value="$(find yocs_velocity_smoother)/param/standalone.yaml"/>
+  <arg name="raw_cmd_vel_topic"     value="raw_cmd_vel"/>
+  <arg name="smooth_cmd_vel_topic"  value="cmd_vel"/>
+  <arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>
+  <arg name="odom_topic"            value="odom"/>
+
+  <include file="$(find imu_node)/launch/imu.launch"/>
+
+  <!-- usradar_a02 -->
+  <include file="$(find usradar)/launch/usradar_a02.launch">
+    <arg name="serial_port"                value="$(arg usradar_serial_port)" />
+    <arg name="baud_rate"                  value="$(arg usradar_baud_rate)" />
+    <arg name="usradar_topic_name"         value="$(arg usradar_topic_name)" />
+    <arg name="filter_method"              value="$(arg usradar_filter_method)" />
+    <arg name="filter_length"              value="$(arg usradar_filter_length)" />
+    <arg name="usradar_num"                value="$(arg usradar_num)" />
+  </include>
+
+  <!-- uwb_pdoa -->
+  <include file="$(find uwb)/launch/uwb_pdoa.launch">
+    <arg name="serial_port"                value="$(arg uwb_serial_port)" />
+    <arg name="baud_rate"                  value="$(arg uwb_baud_rate)" />
+    <arg name="uwb_topic_name"             value="$(arg uwb_topic_name)" />
+    <arg name="filter_method"              value="$(arg uwb_filter_method)" />
+    <arg name="filter_length"              value="$(arg uwb_filter_length)" />
+  </include>
+
+  <!-- naive_follow -->
+  <include file="$(find uwb_follow)/launch/naive_follow.launch">
+    <arg name="input_topic_uwb"            value="$(arg uwb_topic_name)" />
+    <arg name="input_topic_usradar"        value="$(arg usradar_topic_name)" />
+    <arg name="input_topic_odom"           value="$(arg input_topic_odom)"/>
+    <arg name="input_topic_imu"            value="$(arg input_topic_imu)"/>
+    <arg name="output_topic_cmd"           value="$(arg output_topic_cmd)" />
+    <arg name="speed_lim_v"                value="$(arg speed_lim_v)" />
+    <arg name="speed_lim_w"                value="$(arg speed_lim_w)" />
+    <arg name="accel_lim_v"                value="$(arg accel_lim_v)" />
+    <arg name="accel_lim_w"                value="$(arg accel_lim_w)" />
+    <arg name="frequency"                  value="$(arg frequency)" />
+    <arg name="robot_feedback"             value="$(arg robot_feedback)" />
+    <arg name="decel_factor"               value="$(arg decel_factor)" />
+    <arg name="safe_distance_uwb"          value="$(arg safe_distance_uwb)" />
+    <arg name="follow_distance_uwb"        value="$(arg follow_distance_uwb)" />
+    <arg name="usradar0_distances_range"   value="$(arg usradar0_distances_range)" />
+    <arg name="usradar1_distances_range"   value="$(arg usradar1_distances_range)" />
+    <arg name="usradar2_distances_range"   value="$(arg usradar2_distances_range)" />
+    <arg name="usradar3_distances_range"   value="$(arg usradar3_distances_range)" />
+  </include>
+
+  <!-- nodelet manager -->
+  <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager"/>
+  
+  <!-- velocity smoother -->
+  <include file="$(find yocs_velocity_smoother)/launch/velocity_smoother.launch">
+    <arg name="node_name"             value="$(arg node_name)"/>
+    <arg name="nodelet_manager_name"  value="$(arg nodelet_manager_name)"/>
+    <arg name="config_file"           value="$(arg config_file)"/>
+    <arg name="raw_cmd_vel_topic"     value="$(arg raw_cmd_vel_topic)"/>
+    <arg name="smooth_cmd_vel_topic"  value="$(arg smooth_cmd_vel_topic)"/>
+    <arg name="robot_cmd_vel_topic"   value="$(arg robot_cmd_vel_topic)"/>
+    <arg name="odom_topic"            value="$(arg odom_topic)"/>
+  </include>
+</launch>

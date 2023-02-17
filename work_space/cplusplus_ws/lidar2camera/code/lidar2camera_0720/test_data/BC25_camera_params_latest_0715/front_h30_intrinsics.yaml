@@ -1,0 +1,21 @@
+width: 1280
+header:
+  stamp:
+    nsecs: 0
+    secs: 0
+  frame_id: long_camera
+  seq: 0
+binning_x: 0
+binning_y: 0
+P: [1912.403320, 0.0, 626.189580, 0.0, 0.0, 1982.845703, 413.328214, 0.0, 0.0, 0.0, 1.0, 0.0]
+height: 720
+D: [-0.489471, 0.246754, 4.2e-05, 0.000259, 0]
+distortion_model: plumb_bob
+R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+K: [2002.532911, 0, 633.543877, 0, 1999.857481, 361.172789, 0, 0, 1]
+roi:
+  height: 0
+  do_rectify: False
+  width: 0
+  y_offset: 0
+  x_offset: 0
